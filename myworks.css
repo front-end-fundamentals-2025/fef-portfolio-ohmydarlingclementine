@@ -1,19 +1,13 @@
-/*my all works*/
+/* === Custom Font === */
 @font-face {
-    font-family: 'CSCamiloMono-Regular_demo.otf'; 
-
-
-
-    
-    src: url(CSCamiloMono-Regular_demo.otf);
+    font-family: 'CamiloMono';
+    src: url('CSCamiloMono-Regular_demo.otf') format('opentype');
 }
 
-
-
-
+/* === Base Styles === */
 body {
     min-height: 100vh;
-    margin: 0%;
+    margin: 0;
     background-color: rgb(233, 233, 233);
 }
 
@@ -22,7 +16,7 @@ header {
     height: 10vw;
     background-color: rgb(11, 56, 2);
     padding: 4vw;
-    padding-right: 0%;
+    padding-right: 0;
 }
 
 nav {
@@ -32,14 +26,14 @@ nav {
 ul {
     list-style: none;
     display: flex;
+    padding: 0;
+    margin: 0;
 }
 
 li {
     margin-left: 5%;
-    margin-top: 0%;
 }
 
-/
 a {
     text-decoration: none;
     color: white;
@@ -56,13 +50,12 @@ footer {
 }
 
 h1 {
-    font-family: ''CSCamiloMono-Regular_demo.otf'', serif; 
+    font-family: 'CamiloMono', serif;
     color: white;
-    margin: 0%;
+    margin: 0;
     text-align: center;
     font-size: 7vw;
 }
-
 
 h4 {
     margin-left: 8%;
@@ -80,40 +73,34 @@ p {
 
 #link-t-work {
     background-color: rgb(11, 56, 2);
-    padding: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    margin-left: 12%;
+    padding: 5px 10px;
     font-size: 0.9rem;
     animation-name: link;
     animation-timing-function: ease;
 }
 
 #link-t-work:hover {
-    animation: link 0.5 forwards;
+    animation: link 0.5s forwards;
 }
 
 @keyframes link {
     0% {
         background-color: rgb(11, 56, 2);
     }
-
     100% {
         background-color: rgb(47, 138, 29);
     }
 }
 
-/* Images */
+/* === Images === */
 img {
     background-color: white;
     max-width: 250px;
     max-height: 300px;
-    margin: 10px;
-    margin-top: 10px;
-    margin-left: 15%;
+    margin: 10px 0 0 15%;
 }
 
-/* grid things */
+/* === Grid Layout === */
 main {
     display: grid;
     grid-template-columns: 10% auto auto auto 10%;
@@ -129,42 +116,14 @@ main {
     height: auto;
 }
 
-#w1 {
-    grid-area: s1;
-    background-color: white;
-    margin-top: 15px;
-}
+#w1 { grid-area: s1; background-color: white; margin-top: 15px; }
+#w2 { grid-area: s2; background-color: white; margin-top: 15px; }
+#w3 { grid-area: s3; background-color: white; margin-top: 15px; }
+#w4 { grid-area: s4; background-color: white; }
+#w5 { grid-area: s5; background-color: white; }
+#w6 { grid-area: s6; background-color: white; }
 
-#w2 {
-    grid-area: s2;
-    background-color: white;
-    margin-top: 15px;
-}
-
-#w3 {
-    grid-area: s3;
-    background-color: white;
-    margin-top: 15px;
-}
-
-#w4 {
-    grid-area: s4;
-    background-color: white;
-}
-
-#w5 {
-    grid-area: s5;
-    background-color: white;
-}
-
-#w6 {
-    grid-area: s6;
-    background-color: white;
-}
-
-/*grid-things-end*/
-
-/*Animations*/
+/* === Animation Loader === */
 #loading {
     width: 15px;
     height: 15px;
@@ -183,24 +142,13 @@ main {
         transform: translateY(-10px);
         visibility: visible;
     }
-
-    20% {
-        transform: translateY(10px);
-    }
-
-    40% {
-        transform: translateY(-10px);
-    }
-
+    20% { transform: translateY(10px); }
+    40% { transform: translateY(-10px); }
     60% {
         transform: translateY(10px);
         opacity: 1;
     }
-
-    80% {
-        transform: translateY(-10px);
-    }
-
+    80% { transform: translateY(-10px); }
     100% {
         transform: translateY(10px);
         opacity: 0;
@@ -208,16 +156,8 @@ main {
     }
 }
 
-/*animations-end*/
-
-/*media-things*/
-@media screen and (max-width:745px) {
-    header {
-        height: 15vw;
-    }
-}
-
-@media screen and (max-width:1250px) {
+/* === Responsive Media Queries === */
+@media screen and (max-width: 1250px) {
     main {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -231,64 +171,38 @@ main {
 
     #w3 {
         grid-area: s3;
-        background-color: white;
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     #loading {
         width: 10px;
         height: 10px;
-        border-radius: 50%;
-        background-color: white;
-        animation: load;
-        animation-duration: 5s;
-        animation-iteration-count: 1;
-        animation-timing-function: ease;
-        visibility: hidden;
+        animation: load 5s ease 1;
     }
 
     @keyframes load {
-        0% {
-            transform: translateY(50%);
-            visibility: visible;
-        }
-
-        16% {
-            transform: translateY(-50%);
-        }
-
-        32% {
-            transform: translateY(50%);
-        }
-
-        48% {
-            transform: translateY(-50%);
-        }
-
-        64% {
-            transform: translateY(50%);
-            opacity: 1;
-        }
-
-        80% {
-            transform: translateY(-50%);
-        }
-
-        100% {
-            transform: translateY(50%);
-            opacity: 0;
-            visibility: hidden;
-        }
+        0% { transform: translateY(50%); visibility: visible; }
+        16% { transform: translateY(-50%); }
+        32% { transform: translateY(50%); }
+        48% { transform: translateY(-50%); }
+        64% { transform: translateY(50%); opacity: 1; }
+        80% { transform: translateY(-50%); }
+        100% { transform: translateY(50%); opacity: 0; visibility: hidden; }
     }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 745px) {
+    header {
+        height: 15vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
     header {
         height: 17vw;
     }
 
     main {
-        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto auto auto;
         grid-gap: 15px;
@@ -305,5 +219,3 @@ main {
         max-width: 350px;
     }
 }
-
-/*media things end */
