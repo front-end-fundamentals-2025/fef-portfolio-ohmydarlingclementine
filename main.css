@@ -8,6 +8,15 @@
   font-style: normal;
 }
 
+.top-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
 body {
   margin: 0;
   font-size: 16px;
