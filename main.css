@@ -6,6 +6,15 @@ body {
     font-family: Arial, sans-serif;
     color: #222;
     background-color: #fff;
+
+    /*new font*/ 
+    @font-face {
+  font-family: 'CamiloMono';
+  src: url('fonts/CSCamiloMono-Regular_demo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 }
 
 p {
