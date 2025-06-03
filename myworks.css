@@ -1,14 +1,9 @@
-/* === Custom Font === */
-@font-face {
-    font-family: 'CamiloMono';
-    src: url('CSCamiloMono-Regular_demo.otf') format('opentype');
-}
-
-/* === Base Styles === */
+/*my all works*/
 body {
     min-height: 100vh;
-    margin: 0;
+    margin: 0%;
     background-color: rgb(233, 233, 233);
+    font-family: 'Times New Roman', serif;
 }
 
 header {
@@ -16,7 +11,7 @@ header {
     height: 10vw;
     background-color: rgb(11, 56, 2);
     padding: 4vw;
-    padding-right: 0;
+    padding-right: 0%;
 }
 
 nav {
@@ -26,12 +21,11 @@ nav {
 ul {
     list-style: none;
     display: flex;
-    padding: 0;
-    margin: 0;
 }
 
 li {
     margin-left: 5%;
+    margin-top: 0%;
 }
 
 a {
@@ -50,11 +44,11 @@ footer {
 }
 
 h1 {
-    font-family: 'CamiloMono', serif;
     color: white;
-    margin: 0;
+    margin: 0%;
     text-align: center;
     font-size: 7vw;
+    font-family: 'Times New Roman', serif;
 }
 
 h4 {
@@ -73,7 +67,8 @@ p {
 
 #link-t-work {
     background-color: rgb(11, 56, 2);
-    padding: 5px 10px;
+    padding: 5px 5px 2px 5px;
+    margin-left: 12%;
     font-size: 0.9rem;
     animation-name: link;
     animation-timing-function: ease;
@@ -92,15 +87,16 @@ p {
     }
 }
 
-/* === Images === */
+/* Images */
 img {
     background-color: white;
     max-width: 250px;
     max-height: 300px;
-    margin: 10px 0 0 15%;
+    margin: 10px;
+    margin-left: 15%;
 }
 
-/* === Grid Layout === */
+/* grid things */
 main {
     display: grid;
     grid-template-columns: 10% auto auto auto 10%;
@@ -123,41 +119,31 @@ main {
 #w5 { grid-area: s5; background-color: white; }
 #w6 { grid-area: s6; background-color: white; }
 
-/* === Animation Loader === */
+/*Animations*/
 #loading {
     width: 15px;
     height: 15px;
     border-radius: 50%;
     background-color: white;
-    animation-name: load;
-    animation-duration: 5s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease;
-    animation-direction: alternate;
+    animation: load 5s ease alternate 1;
     visibility: hidden;
 }
 
 @keyframes load {
-    0% {
-        transform: translateY(-10px);
-        visibility: visible;
-    }
+    0% { transform: translateY(-10px); visibility: visible; }
     20% { transform: translateY(10px); }
     40% { transform: translateY(-10px); }
-    60% {
-        transform: translateY(10px);
-        opacity: 1;
-    }
+    60% { transform: translateY(10px); opacity: 1; }
     80% { transform: translateY(-10px); }
-    100% {
-        transform: translateY(10px);
-        opacity: 0;
-        visibility: hidden;
-    }
+    100% { transform: translateY(10px); opacity: 0; visibility: hidden; }
 }
 
-/* === Responsive Media Queries === */
-@media screen and (max-width: 1250px) {
+/* Responsive media */
+@media screen and (max-width:745px) {
+    header { height: 15vw; }
+}
+
+@media screen and (max-width:1250px) {
     main {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -171,13 +157,17 @@ main {
 
     #w3 {
         grid-area: s3;
-        margin-top: 0;
+        background-color: white;
+        margin-top: 0px;
     }
 
     #loading {
         width: 10px;
         height: 10px;
+        border-radius: 50%;
+        background-color: white;
         animation: load 5s ease 1;
+        visibility: hidden;
     }
 
     @keyframes load {
@@ -191,18 +181,11 @@ main {
     }
 }
 
-@media screen and (max-width: 745px) {
-    header {
-        height: 15vw;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    header {
-        height: 17vw;
-    }
+@media screen and (max-width:600px) {
+    header { height: 17vw; }
 
     main {
+        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto auto auto;
         grid-gap: 15px;
