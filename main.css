@@ -8,10 +8,15 @@
   font-style: normal;
 }
 
+
 .top-banner {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 100vw;         
+  height: auto;        
+  max-height: 150px;    
+  object-fit: cover;    
+  display: block;       
+  margin: 0;
+  padding: 0;
 }
 
 
