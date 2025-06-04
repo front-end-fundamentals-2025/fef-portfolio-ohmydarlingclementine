@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,71 +22,75 @@
       color: #222;
       background-color: #fff;
     }
+
+    img {
+      width: 300px;
+      height: auto;
+    }
+
+    .photo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    #lina-photo {
+      width: 250px;
+      height: auto;
+      border-radius: 10px;
+    }
   </style>
 </head>
 
 <body>
-  <img src="14.jpg" alt="Top Banner" class="top-banner">
 
+  <img src="14.jpg" alt="Top Banner" class="top-banner" />
 
-  
   <header>
-    <!-- header stuff -->
+    <nav>
+      <section id="top-navbar">
+        <a href="index.html">
+          <p id="logo">Lina's Portfolio</p>
+        </a>
+      </section>
+      <ul id="navbar-categories">
+        <li><a class="navbar-links" href="index.html">About Me</a></li>
+        <li><a class="navbar-links" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
+
+  <main>
+    <section class="cover-image">
+      <div class="photo-container">
+        <img id="lina-photo" src="2.jpg" alt="Lina's photo" />
+      </div>
+    </section>
+
+    <h2>About Me</h2>
+    <section id="about-text-container">
+      <p class="about-text">
+        Hello! My name is Lina, and I'm passionate about creativity, fashion, technology, and making things that connect with people.
+      </p>
+      <p class="about-text">
+        I believe that design is not just about how things look, but how they make people feel.
+      </p>
+      <p class="about-text">
+        I'm currently studying New Media Design and enjoy learning how to express ideas through both visuals and code.
+      </p>
+    </section>
+
+    <h2>My Projects</h2>
+    <section id="projects">
+      <a href="project1.html" id="w1" class="work"><img src="project1.jpg" alt="Project 1"></a>
+      <a href="project2.html" id="w2" class="work"><img src="project2.jpg" alt="Project 2"></a>
+      <a href="project3.html" id="w3" class="work"><img src="project3.jpg" alt="Project 3"></a>
+      <a href="project4.html" id="w4" class="work"><img src="project4.jpg" alt="Project 4"></a>
+      <a href="project5.html" id="w5" class="work"><img src="project5.jpg" alt="Project 5"></a>
+    </section>
+  </main>
+
 </body>
+</html>
 
-  <h2>My Projects</h2>
-<main>
-  <a href="project1.html" id="w1" class="work"><img src="project1.jpg" alt="Project 1"></a>
-  <a href="project2.html" id="w2" class="work"><img src="project2.jpg" alt="Project 2"></a>
-  <a href="project3.html" id="w3" class="work"><img src="project3.jpg" alt="Project 3"></a>
-  <a href="project4.html" id="w4" class="work"><img src="project4.jpg" alt="Project 4"></a>
-  <a href="project5.html" id="w5" class="work"><img src="project5.jpg" alt="Project 5"></a>
-</main>
-
-
-  
-<body>
-  <section id="page-container">
-    <header id="header">
-      <nav>
-        <section id="top-navbar">
-          <a href="index.html">
-            <p id="logo">Lina's Portfolio</p>
-          </a>
-        </section>
-        <ul id="navbar-categories">
-          <li><a class="navbar-links" href="index.html">About Me</a></li>
-          <li><a class="navbar-links" href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main id="main">
-      <section>
-        <section class="cover-image">
-          
-  img {
-  width: 300px;    
-  height: auto;   
-}
-
-            
-          <img src="2.jpg" alt="Photo of Lina" />
-          <div class="photo-container">
-         <img id="lina-photo" 2.jpg" alt="Lina's photo">
-</div>
-
-        </section>
-
-        <h2>About Me</h2>
-
-        <section id="about-text-container">
-          <p class="about-text">
-            Hello! My name is Lina, and I'm passionate about creativity, fashion, technology, and making things that connect with people. I'm currently studying New Media Design, and I enjoy learning how to express ideas through both visuals and code.
-          </p>
-          <p class="about-text">
-            I believe that design is not just about how things look, but how they make people feel. Whether it's a simple webpage or a small interactive project, I try to create with care, clarity, and a bit of soul.
-          </p>
-          <p class="about-text">
-            
