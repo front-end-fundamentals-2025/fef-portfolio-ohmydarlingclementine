@@ -103,6 +103,29 @@ nav {
     color: #aa0457; 
 }
 
+
+
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* full screen height */
+}
+
+#lina-photo {
+  width: 200px; 
+  height: auto;
+  border-radius: 10px; /*  adds rounded corners */
+}
+
+
+
+
+
+
+
+
+
 /* cover image */
 
 .cover-image img {
