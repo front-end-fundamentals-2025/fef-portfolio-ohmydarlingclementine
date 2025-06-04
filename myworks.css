@@ -1,17 +1,24 @@
-/*my all works*/
+/* === Base Styles === */
 body {
     min-height: 100vh;
-    margin: 0%;
+    margin: 0;
     background-color: rgb(233, 233, 233);
-    font-family: 'Times New Roman', serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 header {
-    width: 100vw;
-    height: 10vw;
-    background-color: rgb(11, 56, 2);
+    width: 100%;
+    height: 300px; /* Banner height */
+    background-image: url('14.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 4vw;
-    padding-right: 0%;
+    padding-right: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 nav {
@@ -21,11 +28,12 @@ nav {
 ul {
     list-style: none;
     display: flex;
+    padding: 0;
+    margin: 0;
 }
 
 li {
     margin-left: 5%;
-    margin-top: 0%;
 }
 
 a {
@@ -43,12 +51,12 @@ footer {
     background-color: rgb(11, 56, 2);
 }
 
+/* Header Title */
 h1 {
-    color: white;
-    margin: 0%;
+    margin: 0;
+    font-size: 4vw;
     text-align: center;
-    font-size: 7vw;
-    font-family: 'Times New Roman', serif;
+    text-shadow: 2px 2px 5px black;
 }
 
 h4 {
@@ -65,38 +73,30 @@ p {
     text-align: justify;
 }
 
+/* Button with animation on hover */
 #link-t-work {
     background-color: rgb(11, 56, 2);
-    padding: 5px 5px 2px 5px;
-    margin-left: 12%;
+    padding: 5px 10px;
     font-size: 0.9rem;
-    animation-name: link;
-    animation-timing-function: ease;
+    transition: background-color 0.5s ease;
+    color: white;
+    border-radius: 4px;
 }
 
 #link-t-work:hover {
-    animation: link 0.5s forwards;
+    background-color: rgb(47, 138, 29);
 }
 
-@keyframes link {
-    0% {
-        background-color: rgb(11, 56, 2);
-    }
-    100% {
-        background-color: rgb(47, 138, 29);
-    }
-}
-
-/* Images */
+/* === Images === */
 img {
+    width: 100%;
+    height: auto;
+    max-width: 350px; 
+    margin: 10px 0 0 15%;
     background-color: white;
-    max-width: 250px;
-    max-height: 300px;
-    margin: 10px;
-    margin-left: 15%;
 }
 
-/* grid things */
+/* === Grid Layout === */
 main {
     display: grid;
     grid-template-columns: 10% auto auto auto 10%;
@@ -119,31 +119,41 @@ main {
 #w5 { grid-area: s5; background-color: white; }
 #w6 { grid-area: s6; background-color: white; }
 
-/*Animations*/
+/* Animation Loader */
 #loading {
     width: 15px;
     height: 15px;
     border-radius: 50%;
     background-color: white;
-    animation: load 5s ease alternate 1;
+    animation-name: load;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-direction: alternate;
     visibility: hidden;
 }
 
 @keyframes load {
-    0% { transform: translateY(-10px); visibility: visible; }
+    0% {
+        transform: translateY(-10px);
+        visibility: visible;
+    }
     20% { transform: translateY(10px); }
     40% { transform: translateY(-10px); }
-    60% { transform: translateY(10px); opacity: 1; }
+    60% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
     80% { transform: translateY(-10px); }
-    100% { transform: translateY(10px); opacity: 0; visibility: hidden; }
+    100% {
+        transform: translateY(10px);
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
-/* Responsive media */
-@media screen and (max-width:745px) {
-    header { height: 15vw; }
-}
-
-@media screen and (max-width:1250px) {
+/* Responsive Media Queries */
+@media screen and (max-width: 1250px) {
     main {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -157,17 +167,13 @@ main {
 
     #w3 {
         grid-area: s3;
-        background-color: white;
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     #loading {
         width: 10px;
         height: 10px;
-        border-radius: 50%;
-        background-color: white;
         animation: load 5s ease 1;
-        visibility: hidden;
     }
 
     @keyframes load {
@@ -181,11 +187,18 @@ main {
     }
 }
 
-@media screen and (max-width:600px) {
-    header { height: 17vw; }
+@media screen and (max-width: 745px) {
+    header {
+        height: 200px; /* smaller banner on smaller screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        height: 180px;
+    }
 
     main {
-        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto auto auto;
         grid-gap: 15px;
@@ -199,6 +212,7 @@ main {
     }
 
     img {
-        max-width: 350px;
+        max-width: 100%;
+        margin-left: 0;
     }
 }
