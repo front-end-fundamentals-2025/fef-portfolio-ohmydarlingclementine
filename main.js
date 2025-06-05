@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.getElementById("about-btn");
-  const message = document.getElementById("message");
 
   button.addEventListener("click", function () {
-    message.textContent = "Hey there you!!";
-    message.style.display = "block";
+    /* change button color */
+    button.style.backgroundColor = "##fcb1e7"; // light pink
+    button.style.color = "#ffffff"; // white text
   });
 });
+
