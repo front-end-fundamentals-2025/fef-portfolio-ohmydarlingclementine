@@ -1,6 +1,5 @@
 /* basic layout */
 
-
 @font-face {
   font-family: 'CamiloMono';
   src: url('fonts/CSCamiloMono-Regular_demo.otf') format('opentype');
@@ -8,6 +7,11 @@
   font-style: normal;
 }
 
+/* fade-in animation for photo */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
 .top-banner {
   width: 100vw;         
@@ -19,9 +23,6 @@
   padding: 0;
 }
 
-
-
-
 body {
   margin: 0;
   font-size: 16px;
@@ -30,80 +31,74 @@ body {
   background-color: #fff;
 }
 
-}
-
-}
-
 p {
-    margin: 0 0 1rem 0;
-    line-height: 1.5;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
 }
 
 a {
-    text-decoration: none;
-    color: inherit; 
+  text-decoration: none;
+  color: inherit; 
 }
 
-   /* page container */
+/* page container */
 
 #page-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 #main {
-    flex: 1;
-    margin: 1rem 1rem;    /* horizontal */
+  flex: 1;
+  margin: 1rem 1rem;    /* horizontal */
 }
 
-      /* navigation bar */
+/* navigation bar */
 
 #header {
-    min-height: 70px;
-    background-color: black;
+  min-height: 70px;
+  background-color: black;
 }
 
 nav {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 1rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 0 1rem;
 }
 
 #top-navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #logo {
-    font-size: 2.5rem;
-    color: white;
-    font-weight: bold;
-    margin: 0;
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+  margin: 0;
 }
 
 #navbar-categories {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0.5rem 0 1rem 0;
-    gap: 2rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0.5rem 0 1rem 0;
+  gap: 2rem;
 }
 
 .navbar-links {
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    transition: color 0.3s ease;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .navbar-links:hover {
-    color: #aa0457; 
+  color: #aa0457; 
 }
-
-
 
 .center-wrapper {
   display: flex;
@@ -112,66 +107,19 @@ nav {
   height: 100vh; /* full screen height */
 }
 
+/* applying fade-in animation to the photo */
 #lina-photo {
   width: 200px; 
   height: auto;
-  border-radius: 10px; /*  adds rounded corners */
+  border-radius: 10px; /* adds rounded corners */
+  animation: fadeIn 3s ease forwards;
 }
-
-
-
-
-
-
-
-
 
 /* cover image */
 
 .cover-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-}
-
-/* footer */
-
-footer {
-    background-color: black;
-    color: white;
-    min-height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    margin-top: auto;     /* push footer to bottom */
-}
-
-     /* responsive navigation */
-
-@media screen and (max-width: 520px) {
-    nav {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    #top-navbar {
-        flex: 1;
-    }
-
-    #logo {
-        font-size: 1.8rem;
-    }
-
-    #navbar-categories {
-        gap: 1rem;
-        margin: 0;
-    }
-
-    .navbar-links {
-        font-size: 0.9rem;
-    }
-}
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 8p
