@@ -112,6 +112,7 @@ nav {
   width: 200px; 
   height: auto;
   border-radius: 10px; /* adds rounded corners */
+  opacity: 0;           /* start invisible */
   animation: fadeIn 3s ease forwards;
 }
 
@@ -122,4 +123,45 @@ nav {
   height: auto;
   display: block;
   margin-bottom: 1rem;
-  border-radius: 8p
+  border-radius: 8px;
+}
+
+/* footer */
+
+footer {
+  background-color: black;
+  color: white;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-top: auto;     /* push footer to bottom */
+}
+
+/* responsive navigation */
+
+@media screen and (max-width: 520px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #top-navbar {
+    flex: 1;
+  }
+
+  #logo {
+    font-size: 1.8rem;
+  }
+
+  #navbar-categories {
+    gap: 1rem;
+    margin: 0;
+  }
+
+  .navbar-links {
+    font-size: 0.9rem;
+  }
+}
