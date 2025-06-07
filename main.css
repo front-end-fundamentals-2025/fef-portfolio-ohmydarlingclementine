@@ -1,167 +1,138 @@
 /* basic layout */
-
 @font-face {
-  font-family: 'CamiloMono';
-  src: url('fonts/CSCamiloMono-Regular_demo.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'CamiloMono';
+    src: url('fonts/CSCamiloMono-Regular_demo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-/* fade-in animation for photo */
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.top-banner {
-  width: 100vw;         
-  height: auto;        
-  max-height: 150px;    
-  object-fit: cover;    
-  display: block;       
-  margin: 0;
-  padding: 0;
-}
-
+/* General Body Styles */
 body {
-  margin: 0;
-  font-size: 16px;
-  font-family: 'CamiloMono', Arial, sans-serif;
-  color: #222;
-  background-color: #fff;
+    font-family: 'CamiloMono', Arial, sans-serif;
+    margin: 0;
+    font-size: 16px;
+    color: #222;
+    background-color: #fff;
+    line-height: 1.6;
 }
 
-p {
-  margin: 0 0 1rem 0;
-  line-height: 1.5;
-}
-
-a {
-  text-decoration: none;
-  color: inherit; 
-}
-
-/* page container */
-
-#page-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-#main {
-  flex: 1;
-  margin: 1rem 1rem;    /* horizontal */
-}
-
-/* navigation bar */
-
-#header {
-  min-height: 70px;
-  background-color: black;
+/* Header and Navigation */
+header {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 1rem 0 1rem;
-}
-
-#top-navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 #logo {
-  font-size: 2.5rem;
-  color: white;
-  font-weight: bold;
-  margin: 0;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    margin: 0;
 }
 
 #navbar-categories {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0.5rem 0 1rem 0;
-  gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#navbar-categories li {
+    margin-left: 30px;
 }
 
 .navbar-links {
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  transition: color 0.3s ease;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
 }
 
 .navbar-links:hover {
-  color: #aa0457; 
+    color: #007bff;
 }
 
-.center-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* full screen height */
+/* Banner Image */
+.banner-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
 }
 
-/* applying fade-in animation to the photo */
-#lina-photo {
-  width: 200px; 
-  height: auto;
-  border-radius: 10px; /* adds rounded corners */
-  opacity: 0;           /* start invisible */
-  animation: fadeIn 3s ease forwards;
+/* Main Content */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-/* cover image */
-
-.cover-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-}
-
-/* footer */
-
-footer {
-  background-color: black;
-  color: white;
-  min-height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  margin-top: auto;     /* push footer to bottom */
-}
-
-/* responsive navigation */
-
-@media screen and (max-width: 520px) {
-  nav {
-    flex-direction: row;
-    justify-content: space-between;
+/* About Me Section */
+.about-section-wrapper {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-  }
+    gap: 40px;
+    margin-top: 40px;
+}
 
-  #top-navbar {
+@media (min-width: 768px) {
+    .about-section-wrapper {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+#lina-photo {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #eee;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.about-text-content {
     flex: 1;
-  }
+}
 
-  #logo {
-    font-size: 1.8rem;
-  }
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
 
-  #navbar-categories {
-    gap: 1rem;
-    margin: 0;
-  }
+.about-text {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
 
-  .navbar-links {
-    font-size: 0.9rem;
-  }
+/* 🎀 About Me Button Styling */
+#about-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-family: 'CamiloMono', Arial, sans-serif;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#about-btn:hover {
+    background-color: #fcb1e7;
+    color: white;
 }
