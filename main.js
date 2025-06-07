@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
+<script>
   const button = document.getElementById("about-btn");
 
-  button.addEventListener("click", function () {
-    // toggle the clicked class to change color
+  button.addEventListener("click", function() {
     button.classList.toggle("clicked");
   });
-});
+</script>
+</body>
