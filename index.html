@@ -1,183 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About Me - Lina</title>
-    <link rel="stylesheet" href="css/main.css" />
-    <script src="js/main.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me - Lina</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="js/main.js" defer></script>
 
-    <style>
-        /* Custom font */
-        @font-face {
-            font-family: 'CamiloMono';
-            src: url('fonts/CSCamiloMono-Regular_demo.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
+  <style>
+    @font-face {
+      font-family: 'CamiloMono';
+      src: url('fonts/CSCamiloMono-Regular_demo.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
 
-        /* General Body Styles */
-        body {
-            font-family: 'CamiloMono', Arial, sans-serif;
-            margin: 0;
-            font-size: 16px;
-            color: #222;
-            background-color: #fff;
-            line-height: 1.6; /* Better readability */
-        }
+    body {
+      font-family: 'CamiloMono', Arial, sans-serif;
+      margin: 0;
+      font-size: 16px;
+      color: #222;
+      background-color: #fff;
+      line-height: 1.6;
+    }
 
-        /* Header and Navigation */
-        header {
-            background-color: #f8f8f8; /* Light background for header */
-            padding: 10px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+    header {
+      background-color: #f8f8f8;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px; /* Limit nav width */
-            margin: 0 auto; /* Center nav */
-            padding: 0 20px; /* Padding on sides */
-        }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        #logo {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: #333;
-            text-decoration: none;
-            margin: 0; /* Remove default paragraph margin */
-        }
+    #logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+    }
 
-        #navbar-categories {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+    #navbar-categories {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
 
-        #navbar-categories li {
-            margin-left: 30px;
-        }
+    #navbar-categories li {
+      margin-left: 30px;
+    }
 
-        .navbar-links {
-            text-decoration: none;
-            color: #555;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: color 0.3s ease;
-        }
+    .navbar-links {
+      text-decoration: none;
+      color: #555;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
 
-        .navbar-links:hover {
-            color: #007bff; /* Highlight on hover */
-        }
+    .navbar-links:hover {
+      color: #007bff;
+    }
 
-        /* Banner Image */
-        .banner-image {
-            width: 100%;
-            height: 300px; /* Adjust height as needed */
-            object-fit: cover; /* Ensures image covers the area without distortion */
-            display: block; /* Removes extra space below image */
-        }
+    .banner-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
 
-        /* Main Content */
-        main {
-            max-width: 1000px; /* Max width for content */
-            margin: 40px auto; /* Center main content with top/bottom margin */
-            padding: 0 20px; /* Padding on sides */
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
 
-    
-        }
+    .about-section-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      margin-top: 40px;
+    }
 
+    @media (min-width: 768px) {
+      .about-section-wrapper {
+        flex-direction: row;
+        text-align: left;
+      }
+    }
 
+    #lina-photo {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #eee;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
 
+    .about-text-content {
+      flex: 1;
+    }
 
+    h2 {
+      text-align: center;
+      color: #333;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
 
-        
-        /* About Me Section */
-        .about-section-wrapper {
-            display: flex;
-            flex-direction: column; /* Default for smaller screens */
-            align-items: center;
-            gap: 40px; /* Space between photo and text */
-            margin-top: 40px;
-        }
+    .about-text {
+      margin-bottom: 15px;
+      font-size: 1.1em;
+    }
 
-        @media (min-width: 768px) {
-            .about-section-wrapper {
-                flex-direction: row; /* Side-by-side for larger screens */
-                text-align: left;
-            }
-        }
+    /* Optional: transition effect for button color */
+    #about-btn {
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      background-color: #eee;
+      border: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-        #lina-photo {
-            width: 280px; /* Slightly larger photo */
-            height: 280px; /* Make it square */
-            border-radius: 50%; /* Make it round */
-            object-fit: cover; /* Ensures photo fills the circle */
-            border: 5px solid #eee; /* Light border */
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .about-text-content {
-            flex: 1; /* Allows text to take available space */
-        }
-
-        h2 {
-            text-align: center; /* Center the "About Me" heading */
-            color: #333;
-            font-size: 2.2em;
-            margin-bottom: 20px;
-        }
-
-        .about-text {
-            margin-bottom: 15px; /* Space between paragraphs */
-            font-size: 1.1em;
-        }
-    </style>
+    #about-btn.clicked {
+      background-color: #fcb1e7;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
-    <img src="banner.jpg" alt="Website Banner" class="banner-image" />
+  <img src="banner.jpg" alt="Website Banner" class="banner-image" />
 
-    <header>
-        <nav>
-            <a href="index.html" id="logo">Lina's Portfolio</a>
-            <ul id="navbar-categories">
-                <li><a class="navbar-links" href="index.html">About Me</a></li>
-                <li><a class="navbar-links" href="myworks.html">Projects</a></li> <li><a class="navbar-links" href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <a href="index.html" id="logo">Lina's Portfolio</a>
+      <ul id="navbar-categories">
+        <li><a class="navbar-links" href="index.html">About Me</a></li>
+        <li><a class="navbar-links" href="myworks.html">Projects</a></li>
+        <li><a class="navbar-links" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <h2>About Me</h2>
-        
-          <button id="about-btn">About Me</button>
-         <div id="message" style="display: none; font-size: 24px; color: purple; margin-top: 10px;"></div>
+  <main>
+    <h2>About Me</h2>
 
-        <section class="about-section-wrapper">
-            <div class="profile-photo-container">
-                <img id="lina-photo" src="2.jpg" alt="Lina's profile photo" />
-            </div>
+    <button id="about-btn">About Me</button>
 
-            <div class="about-text-content">
-                <p class="about-text">
-                    Hello! My name is Lina, and I'm passionate about creativity, fashion, technology, and making things that connect with people.
-                </p>
-                <p class="about-text">
-                    I believe that design is not just about how things look, but how they make people feel.
-                </p>
-                <p class="about-text">
-                    I'm currently studying New Media Design and enjoy learning how to express ideas through both visuals and code.
-                </p>
-                <p class="about-text">
-                    My portfolio showcases my journey and the diverse projects I've worked on, reflecting my dedication to innovative design and problem-solving.
-                </p>
-            </div>
-        </section>
-    </main>
+    <section class="about-section-wrapper">
+      <div class="profile-photo-container">
+        <img id="lina-photo" src="2.jpg" alt="Lina's profile photo" />
+      </div>
 
+      <div class="about-text-content">
+        <p class="about-text">
+          Hello! My name is Lina, and I'm passionate about creativity, fashion, technology, and making things that connect with people.
+        </p>
+        <p class="about-text">
+          I believe that design is not just about how things look, but how they make people feel.
+        </p>
+        <p class="about-text">
+          I'm currently studying New Media Design and enjoy learning how to express ideas through both visuals and code.
+        </p>
+        <p class="about-text">
+          My portfolio showcases my journey and the diverse projects I've worked on, reflecting my dedication to innovative design and problem-solving.
+        </p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
