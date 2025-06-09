@@ -119,7 +119,7 @@ h2 {
     font-size: 1.1em;
 }
 
-/* 🎀 About Me Button Styling */
+/* about me button Styling */
 #about-btn {
     padding: 12px 24px;
     font-size: 1rem;
@@ -135,4 +135,41 @@ h2 {
 #about-btn:hover {
     background-color: #fcb1e7;
     color: white;
+}
+
+
+
+
+/*https://www.youtube.com/watch?v=5yl75eM0Y4A*/
+
+/* animation keyframes */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* animation classes */
+.fade-up {
+    animation: fadeUp 1s ease-out;
+}
+
+.fade-down {
+    animation: fadeDown 1s ease-out;
 }
