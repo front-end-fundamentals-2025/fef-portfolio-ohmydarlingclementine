@@ -122,7 +122,6 @@
       font-size: 1.1em;
     }
 
-    /* Optional: transition effect for button color */
     #about-btn {
       padding: 10px 20px;
       font-size: 1em;
@@ -136,6 +135,37 @@
     #about-btn.clicked {
       background-color: #fcb1e7;
       color: white;
+    }
+
+    /* ✨ Animation styles */
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-up {
+      animation: fadeUp 1s ease-out;
+    }
+
+    .fade-down {
+      animation: fadeDown 1s ease-out;
     }
   </style>
 </head>
@@ -155,11 +185,11 @@
   </header>
 
   <main>
-    <h2>About Me</h2>
+    <h2 class="fade-down">About Me</h2>
 
     <button id="about-btn">About Me</button>
 
-    <section class="about-section-wrapper">
+    <section class="about-section-wrapper fade-up">
       <div class="profile-photo-container">
         <img id="lina-photo" src="2.jpg" alt="Lina's profile photo" />
       </div>
