@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Me - Lina</title>
   <link rel="stylesheet" href="css/main.css" />
-  <script src="js/main.js" defer></script>
 
   <style>
     @font-face {
@@ -130,8 +129,6 @@
       border: none;
       border-radius: 6px;
       transition: background-color 0.3s ease, color 0.3s ease;
-      display: block;
-      margin: 0 auto 40px;
     }
 
     #about-btn.clicked {
@@ -212,5 +209,15 @@
       </div>
     </section>
   </main>
+
+  <script>
+    const btn = document.getElementById("about-btn");
+    if (btn) {
+      btn.addEventListener("click", function () {
+        btn.classList.toggle("clicked");
+        alert("You clicked the About Me button!");
+      });
+    }
+  </script>
 </body>
 </html>
