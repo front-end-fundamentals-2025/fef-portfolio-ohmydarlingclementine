@@ -1,5 +1,3 @@
-/*https://www.youtube.com/watch?v=OgoSrwta6Rg*/
-
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("about-btn");
   if (btn) {
