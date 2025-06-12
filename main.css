@@ -47,7 +47,7 @@ nav {
     display: flex;
 }
 
-#navbar-categories li + li + li {
+#navbar-categories  {
     margin-left: 30px;
 }
 
