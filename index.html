@@ -18,7 +18,7 @@
       font-family: 'CamiloMono', Arial, sans-serif;
       margin: 0;
       font-size: 16px;
-      color: #222;
+      color: #221;
       background-color: #fff;
       line-height: 1.6;
     }
@@ -41,10 +41,13 @@
     #logo {
       font-size: 1.8em;
       font-weight: bold;
-      color: #333;
+      color: #330;
       text-decoration: none;
     }
 
+    /*navigation part*/ 
+    /*https://www.youtube.com/watch?v=f3uCSh6LIY0*/
+    
     #navbar-categories {
       list-style: none;
       margin: 0;
@@ -52,7 +55,7 @@
       display: flex;
     }
 
-    #navbar-categories li {
+    #navbar-categories {
       margin-left: 30px;
     }
 
@@ -106,12 +109,13 @@
     }
 
     .about-text-content {
+      /*shrink*/
       flex: 1;
     }
 
     h2 {
       text-align: center;
-      color: #333;
+      color: #330;
       font-size: 2.2em;
       margin-bottom: 20px;
     }
@@ -136,7 +140,10 @@
       color: white;
     }
 
-    /* ✨ Animation styles */
+
+    /* https://www.youtube.com/watch?v=5yl75eM0Y4A */
+
+      /* animation styles */
     @keyframes fadeUp {
       0% {
         opacity: 0;
@@ -210,12 +217,15 @@
     </section>
   </main>
 
+/* js part here */
+/*https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById*/
+  
   <script>
     const btn = document.getElementById("about-btn");
     if (btn) {
       btn.addEventListener("click", function () {
         btn.classList.toggle("clicked");
-        alert("Hi There! Thanks for clicking the button! ❤️");
+        alert("Hi There! :) Thanks for clicking the button! ❤️");
       });
     }
   </script>
